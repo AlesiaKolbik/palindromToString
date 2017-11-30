@@ -18,10 +18,10 @@ public class Main {
     public static boolean isPalindrome(String string) {
         boolean palindrome = false;
         String invertedWord = new String();
-        for (int i = string.length(); i >= 0; i--) {
+        for (int i = string.length()-1; i >= 0; i--) {
             invertedWord += string.charAt(i);
         }
-        if (string.equals(invertedWord)) {
+        if (string.equalsIgnoreCase(invertedWord)) {
             palindrome = true;
         }
         return palindrome;
